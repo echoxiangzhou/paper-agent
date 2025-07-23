@@ -14,7 +14,7 @@
 
 - **Phase 0 (初始设置)**: ✅ 100% 完成
 - **Phase 1 (环境设置)**: ✅ 100% 完成  
-- **Phase 2 (后端开发)**: 🔄 15% 进行中
+- **Phase 2 (后端开发)**: 🔄 75% 进行中
 - **Phase 3 (前端开发)**: ⏳ 0% 待开始
 - **Phase 4 (集成测试)**: ⏳ 0% 待开始
 - **Phase 5 (部署)**: ⏳ 0% 待开始
@@ -56,33 +56,41 @@
 - [x] CORS中间件配置
 - [x] 应用测试脚本创建和验证
 
+### Phase 2.3: 数据库模型开发 (100%)
+- [x] 基础模型类创建 (`backend/app/models/base.py`)
+- [x] 用户模型 (`backend/app/models/user.py`)
+- [x] 分类和关键词模型 (`backend/app/models/keyword.py`)
+- [x] 论文模型 (`backend/app/models/paper.py`)
+- [x] 用户-论文关联模型 (`backend/app/models/paper.py`)
+- [x] 邮箱配置模型 (`backend/app/models/email_config.py`)
+- [x] 数据库迁移脚本创建和执行
+
+### Phase 2.4: 核心服务实现 (100%)
+- [x] JWT认证服务 (`backend/app/core/security.py`)
+- [x] 依赖注入工具 (`backend/app/utils/deps.py`)
+- [x] 自定义异常处理 (`backend/app/utils/exceptions.py`)
+- [x] Celery应用配置 (`backend/app/core/celery_app.py`)
+- [x] Pydantic数据模式 (`backend/app/schemas/`)
+
+### Phase 2.5: API端点实现 (100%)
+- [x] 认证端点 (`backend/app/api/v1/endpoints/auth.py`)
+- [x] 用户管理端点 (`backend/app/api/v1/endpoints/users.py`)
+- [x] API路由集成 (`backend/app/api/v1/api.py`)
+- [x] 异常处理器集成到主应用
+- [x] API文档自动生成配置
+
 ## 🔄 进行中任务
 
-### Phase 2.3: 数据库模型开发 (0%)
-- [ ] 基础模型类创建 (`backend/app/models/base.py`)
-- [ ] 用户模型 (`backend/app/models/user.py`)
-- [ ] 分类模型 (`backend/app/models/keyword.py`)
-- [ ] 关键词模型 (`backend/app/models/keyword.py`)
-- [ ] 论文模型 (`backend/app/models/paper.py`)
-- [ ] 用户-论文关联模型 (`backend/app/models/paper.py`)
-- [ ] 邮箱配置模型 (`backend/app/models/email_config.py`)
-
-## ⏳ 待开始任务
-
-### Phase 2.4: 核心服务实现 (待开始)
-- [ ] JWT认证服务 (`backend/app/core/security.py`)
-- [ ] 依赖注入工具 (`backend/app/utils/deps.py`)
-- [ ] 自定义异常处理 (`backend/app/utils/exceptions.py`)
-- [ ] Celery应用配置 (`backend/app/core/celery_app.py`)
-
-### Phase 2.5: AI集成 (待开始)
+### Phase 2.6: AI集成 (待开始)
 - [ ] OpenRouter客户端 (`backend/app/services/ai_service.py`)
 - [ ] Gemini Flash 2.0配置
 - [ ] 论文总结提示词模板
 - [ ] token使用跟踪
 - [ ] 响应缓存机制
 
-### Phase 2.6: 邮件和论文处理 (待开始)
+## ⏳ 待开始任务
+
+### Phase 2.7: 邮件和论文处理 (待开始)
 - [ ] IMAP客户端 (`backend/app/services/email_service.py`)
 - [ ] 邮件解析器
 - [ ] Firecrawl集成 (`backend/app/services/firecrawl_service.py`)
@@ -91,13 +99,17 @@
 - [ ] CrewAI代理适配
 - [ ] 去重服务
 
-### Phase 2.7: API端点 (待开始)
-- [ ] 认证端点 (`backend/app/api/v1/endpoints/auth.py`)
-- [ ] 用户管理端点 (`backend/app/api/v1/endpoints/users.py`)
+### Phase 2.8: 扩展API端点 (待开始)
 - [ ] 关键词管理端点 (`backend/app/api/v1/endpoints/keywords.py`)
 - [ ] 论文管理端点 (`backend/app/api/v1/endpoints/papers.py`)
 - [ ] 邮箱配置端点 (`backend/app/api/v1/endpoints/email_configs.py`)
 - [ ] 任务管理端点 (`backend/app/api/v1/endpoints/tasks.py`)
+
+### Phase 2.9: 后台任务系统 (待开始)
+- [ ] 邮件检查任务 (`backend/app/tasks/email_tasks.py`)
+- [ ] 论文处理任务 (`backend/app/tasks/paper_tasks.py`)
+- [ ] AI分析任务 (`backend/app/tasks/ai_tasks.py`)
+- [ ] 维护任务 (`backend/app/tasks/maintenance_tasks.py`)
 
 ## 📁 文件架构状态
 
@@ -289,6 +301,6 @@ git checkout development
 
 ---
 
-**开发进度**: Phase 2.2 完成，Phase 2.3 开始
+**开发进度**: Phase 2.5 完成，Phase 2.6 开始
 **预计完成时间**: 2-3周内完成MVP
-**下次更新**: 完成数据库模型后
+**下次更新**: 完成AI服务集成后
