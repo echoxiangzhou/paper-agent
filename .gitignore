@@ -407,3 +407,6 @@ grafana_data/
 # Temporary files
 tmp/
 temp/
+
+# Legacy files
+legacy/
